@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8801AEBE277D0FE900C284A5 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8801AEBD277D0FE900C284A5 /* IQKeyboardManagerSwift */; };
+		8801AEC3277D266700C284A5 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8801AEC2277D266700C284A5 /* SwiftEntryKit */; };
 		881AE116277BE0ED007E763B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AE115277BE0ED007E763B /* AppDelegate.swift */; };
 		881AE118277BE0ED007E763B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AE117277BE0ED007E763B /* SceneDelegate.swift */; };
 		881AE11A277BE0ED007E763B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AE119277BE0ED007E763B /* ViewController.swift */; };
 		881AE11D277BE0ED007E763B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881AE11B277BE0ED007E763B /* Main.storyboard */; };
 		881AE11F277BE0EF007E763B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881AE11E277BE0EF007E763B /* Assets.xcassets */; };
 		881AE122277BE0EF007E763B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881AE120277BE0EF007E763B /* LaunchScreen.storyboard */; };
+		881AE12B277BFA40007E763B /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 881AE12A277BFA40007E763B /* Socket */; };
+		881AE12D277BFAAB007E763B /* ps4payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AE12C277BFAAB007E763B /* ps4payload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		881AE112277BE0ED007E763B /* iops4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iops4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		881AE112277BE0ED007E763B /* ioPS4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ioPS4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881AE115277BE0ED007E763B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		881AE117277BE0ED007E763B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		881AE119277BE0ED007E763B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,7 @@
 		881AE11E277BE0EF007E763B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881AE121277BE0EF007E763B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		881AE123277BE0EF007E763B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		881AE12C277BFAAB007E763B /* ps4payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ps4payload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881AE12B277BFA40007E763B /* Socket in Frameworks */,
+				8801AEBE277D0FE900C284A5 /* IQKeyboardManagerSwift in Frameworks */,
+				8801AEC3277D266700C284A5 /* SwiftEntryKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +48,7 @@
 		881AE109277BE0ED007E763B = {
 			isa = PBXGroup;
 			children = (
-				881AE114277BE0ED007E763B /* iops4 */,
+				881AE114277BE0ED007E763B /* ioPS4 */,
 				881AE113277BE0ED007E763B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +56,12 @@
 		881AE113277BE0ED007E763B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				881AE112277BE0ED007E763B /* iops4.app */,
+				881AE112277BE0ED007E763B /* ioPS4.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		881AE114277BE0ED007E763B /* iops4 */ = {
+		881AE114277BE0ED007E763B /* ioPS4 */ = {
 			isa = PBXGroup;
 			children = (
 				881AE115277BE0ED007E763B /* AppDelegate.swift */,
@@ -63,16 +71,17 @@
 				881AE11E277BE0EF007E763B /* Assets.xcassets */,
 				881AE120277BE0EF007E763B /* LaunchScreen.storyboard */,
 				881AE123277BE0EF007E763B /* Info.plist */,
+				881AE12C277BFAAB007E763B /* ps4payload.swift */,
 			);
-			path = iops4;
+			path = ioPS4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		881AE111277BE0ED007E763B /* iops4 */ = {
+		881AE111277BE0ED007E763B /* ioPS4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 881AE126277BE0EF007E763B /* Build configuration list for PBXNativeTarget "iops4" */;
+			buildConfigurationList = 881AE126277BE0EF007E763B /* Build configuration list for PBXNativeTarget "ioPS4" */;
 			buildPhases = (
 				881AE10E277BE0ED007E763B /* Sources */,
 				881AE10F277BE0ED007E763B /* Frameworks */,
@@ -82,9 +91,14 @@
 			);
 			dependencies = (
 			);
-			name = iops4;
+			name = ioPS4;
+			packageProductDependencies = (
+				881AE12A277BFA40007E763B /* Socket */,
+				8801AEBD277D0FE900C284A5 /* IQKeyboardManagerSwift */,
+				8801AEC2277D266700C284A5 /* SwiftEntryKit */,
+			);
 			productName = iops4;
-			productReference = 881AE112277BE0ED007E763B /* iops4.app */;
+			productReference = 881AE112277BE0ED007E763B /* ioPS4.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 881AE10D277BE0ED007E763B /* Build configuration list for PBXProject "iops4" */;
+			buildConfigurationList = 881AE10D277BE0ED007E763B /* Build configuration list for PBXProject "ioPS4" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +125,16 @@
 				Base,
 			);
 			mainGroup = 881AE109277BE0ED007E763B;
+			packageReferences = (
+				881AE129277BFA40007E763B /* XCRemoteSwiftPackageReference "BlueSocket" */,
+				8801AEBC277D0FE900C284A5 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				8801AEC1277D266700C284A5 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+			);
 			productRefGroup = 881AE113277BE0ED007E763B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				881AE111277BE0ED007E763B /* iops4 */,
+				881AE111277BE0ED007E763B /* ioPS4 */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881AE12D277BFAAB007E763B /* ps4payload.swift in Sources */,
 				881AE11A277BE0ED007E763B /* ViewController.swift in Sources */,
 				881AE116277BE0ED007E763B /* AppDelegate.swift in Sources */,
 				881AE118277BE0ED007E763B /* SceneDelegate.swift in Sources */,
@@ -217,7 +237,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,11 +312,14 @@
 				DEVELOPMENT_TEAM = GR3NL679U6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iops4/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ioPS4;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +330,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
@@ -320,11 +344,14 @@
 				DEVELOPMENT_TEAM = GR3NL679U6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iops4/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ioPS4;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,13 +362,14 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		881AE10D277BE0ED007E763B /* Build configuration list for PBXProject "iops4" */ = {
+		881AE10D277BE0ED007E763B /* Build configuration list for PBXProject "ioPS4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				881AE124277BE0EF007E763B /* Debug */,
@@ -350,7 +378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		881AE126277BE0EF007E763B /* Build configuration list for PBXNativeTarget "iops4" */ = {
+		881AE126277BE0EF007E763B /* Build configuration list for PBXNativeTarget "ioPS4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				881AE127277BE0EF007E763B /* Debug */,
@@ -360,6 +388,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8801AEBC277D0FE900C284A5 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.9;
+			};
+		};
+		8801AEC1277D266700C284A5 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		881AE129277BFA40007E763B /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/BlueSocket";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8801AEBD277D0FE900C284A5 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8801AEBC277D0FE900C284A5 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		8801AEC2277D266700C284A5 /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8801AEC1277D266700C284A5 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
+		};
+		881AE12A277BFA40007E763B /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 881AE129277BFA40007E763B /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 881AE10A277BE0ED007E763B /* Project object */;
 }
