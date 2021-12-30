@@ -29,6 +29,7 @@
 		881AE121277BE0EF007E763B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		881AE123277BE0EF007E763B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		881AE12C277BFAAB007E763B /* ps4payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ps4payload.swift; sourceTree = "<group>"; };
+		887DDF43277D523200FD4166 /* ioPS4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ioPS4.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		881AE114277BE0ED007E763B /* ioPS4 */ = {
 			isa = PBXGroup;
 			children = (
+				887DDF43277D523200FD4166 /* ioPS4.entitlements */,
 				881AE115277BE0ED007E763B /* AppDelegate.swift */,
 				881AE117277BE0ED007E763B /* SceneDelegate.swift */,
 				881AE119277BE0ED007E763B /* ViewController.swift */,
@@ -307,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ioPS4/ioPS4.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GR3NL679U6;
@@ -327,6 +330,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.brandonplank.iops4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ioPS4/ioPS4.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GR3NL679U6;
@@ -359,6 +364,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.brandonplank.iops4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

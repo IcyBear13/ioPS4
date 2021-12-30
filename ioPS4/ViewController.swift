@@ -32,14 +32,42 @@ class ViewController: UIViewController {
     
     var payloadURL: URL?
     
+    func showPopup(msg: String?, sucess: Bool) {
+        DispatchQueue.main.async { [self] in
+            var attributes = EKAttributes.topFloat
+            attributes.entryBackground = .color(color: EKColor(red: 34, green: 35, blue: 35))
+            attributes.popBehavior = .animated(animation: .init(translate: .init(duration: 10), scale: .init(from: 1, to: 0.7, duration: 0.7)))
+            attributes.shadow = .active(with: .init(color: .black, opacity: 0.5, radius: 10, offset: .zero))
+            attributes.statusBar = .dark
+            attributes.scroll = .enabled(swipeable: true, pullbackAnimation: .jolt)
+            attributes.positionConstraints.maxSize = .init(width: .constant(value: UIScreen.main.bounds.width), height: .intrinsic)
+
+            let title = EKProperty.LabelContent(text: sucess ? "Success" : "Error", style: .init(font: .systemFont(ofSize: 12), color: .white))
+            let description = EKProperty.LabelContent(text: msg ?? "No message", style: .init(font: .systemFont(ofSize: 12), color: .white))
+            let image = EKProperty.ImageContent(image: UIImage(systemName: "info.circle")!.withTintColor(UIColor.white), size: CGSize(width: 35, height: 35))
+            let simpleMessage = EKSimpleMessage(image: image, title: title, description: description)
+            let notificationMessage = EKNotificationMessage(simpleMessage: simpleMessage)
+
+            let contentView = EKNotificationMessageView(with: notificationMessage)
+            SwiftEntryKit.display(entry: contentView, using: attributes)
+            sendPayloadOutlet.isEnabled = true
+            sendPayloadOutlet.setTitle("Send Payload", for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         overrideUserInterfaceStyle = .dark
         super.viewDidLoad()
         if let ip = readKey(key: ipKey) {
             ipOutlet.text = ip
         }
+        
         if let port = readKey(key: portKey) {
             portOutlet.text = port
+        }
+        
+        if readKey(key: portKey) == nil || readKey(key: portKey)?.isEmpty ?? true {
+            portOutlet.text = "9090"
         }
     }
     
@@ -67,53 +95,39 @@ class ViewController: UIViewController {
         sendPayloadOutlet.isEnabled = false
         sendPayloadOutlet.setTitle("Sending Payload", for: .normal)
         guard let ip = ipOutlet.text else {
-            errorLabel.text = "Please input a IP adress"
+            showPopup(msg: "Please input a IP adress", sucess: false)
             return
         }
         
         guard let port = portOutlet.text else {
-            errorLabel.text = "Please input a port"
+            showPopup(msg: "Please input a port", sucess: false)
             return
         }
         
         if ip.isEmpty {
-            errorLabel.text = "Please input a IP adress"
+            showPopup(msg: "Please input a IP", sucess: false)
             return
         }
         
         if port.isEmpty{
-            errorLabel.text = "Please input a port"
+            showPopup(msg: "Please input a port", sucess: false)
             return
         }
         
         guard let payloadURL = payloadURL else {
-            errorLabel.text = "Please add a payload"
+            showPopup(msg: "Please add a payload", sucess: false)
+            return
+        }
+        
+        guard let portInt = Int32(port) else {
+            showPopup(msg: "Please input a valid port number", sucess: false)
             return
         }
 
-        DispatchQueue.global(qos: .background).async(execute: {
-            let ret = Payload.Payload(addr: ip, port: Int32(Int(port)!), payload: try! Data(contentsOf: payloadURL))
+        DispatchQueue.global(qos: .background).async(execute: { [self] in
+            let ret = Payload.Payload(addr: ip, port: portInt, payload: try! Data(contentsOf: payloadURL))
             if let returnStr = ret.str {
-                DispatchQueue.main.async { [self] in
-                    var attributes = EKAttributes.topFloat
-                    attributes.entryBackground = .color(color: EKColor(red: 34, green: 35, blue: 35))
-                    attributes.popBehavior = .animated(animation: .init(translate: .init(duration: 2), scale: .init(from: 1, to: 0.7, duration: 0.7)))
-                    attributes.shadow = .active(with: .init(color: .black, opacity: 0.5, radius: 10, offset: .zero))
-                    attributes.statusBar = .dark
-                    attributes.scroll = .enabled(swipeable: true, pullbackAnimation: .jolt)
-                    attributes.positionConstraints.maxSize = .init(width: .constant(value: UIScreen.main.bounds.width), height: .intrinsic)
-
-                    let title = EKProperty.LabelContent(text: ret.sucess ? "Success" : "Error", style: .init(font: .systemFont(ofSize: 12), color: .white))
-                    let description = EKProperty.LabelContent(text: returnStr, style: .init(font: .systemFont(ofSize: 12), color: .white))
-                    let image = EKProperty.ImageContent(image: UIImage(systemName: "info.circle")!.withTintColor(UIColor.white), size: CGSize(width: 35, height: 35))
-                    let simpleMessage = EKSimpleMessage(image: image, title: title, description: description)
-                    let notificationMessage = EKNotificationMessage(simpleMessage: simpleMessage)
-
-                    let contentView = EKNotificationMessageView(with: notificationMessage)
-                    SwiftEntryKit.display(entry: contentView, using: attributes)
-                    sendPayloadOutlet.isEnabled = true
-                    sendPayloadOutlet.setTitle("Send Payload", for: .normal)
-                }
+                showPopup(msg: returnStr, sucess: ret.sucess)
             }
         })
     }
