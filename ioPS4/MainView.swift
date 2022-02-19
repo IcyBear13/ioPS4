@@ -163,10 +163,6 @@ struct MainView: View {
         .background(DocumentPicker(showPicker: $showDocPicker, filetypes: [.init("public.data")!], completion: { path in
             payload = path
         }).frame(width: 0, height: 0))
-        .overlay(
-            Text("banner")
-                .frame(width: 0, height: 0)
-                .banner(data: $bannerData, show: $showBanner))
         .overlay(VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 Spacer()
@@ -180,6 +176,10 @@ struct MainView: View {
             }
             Spacer()
         })
+        .overlay(
+            Text("banner")
+                .frame(width: 0, height: 0)
+                .banner(data: $bannerData, show: $showBanner))
         .alert(isPresented: $showInfo) {
             Alert(title: Text("ioPS4"), message: Text("Made by Brandon Plank"), dismissButton: .default(Text("OK")))
         }
