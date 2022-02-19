@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30D8DF0627C100BF00C6A8FD /* ioPS4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8DF0527C100BF00C6A8FD /* ioPS4App.swift */; };
+		30D8DF0827C100E100C6A8FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8DF0727C100E100C6A8FD /* MainView.swift */; };
+		30D8DF0A27C106AD00C6A8FD /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8DF0927C106AD00C6A8FD /* DocumentPicker.swift */; };
+		30D8DF0C27C13C9500C6A8FD /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8DF0B27C13C9500C6A8FD /* Banner.swift */; };
 		8801AEBE277D0FE900C284A5 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8801AEBD277D0FE900C284A5 /* IQKeyboardManagerSwift */; };
 		8801AEC3277D266700C284A5 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8801AEC2277D266700C284A5 /* SwiftEntryKit */; };
-		881AE116277BE0ED007E763B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AE115277BE0ED007E763B /* AppDelegate.swift */; };
-		881AE118277BE0ED007E763B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AE117277BE0ED007E763B /* SceneDelegate.swift */; };
 		881AE11A277BE0ED007E763B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881AE119277BE0ED007E763B /* ViewController.swift */; };
 		881AE11D277BE0ED007E763B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881AE11B277BE0ED007E763B /* Main.storyboard */; };
 		881AE11F277BE0EF007E763B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881AE11E277BE0EF007E763B /* Assets.xcassets */; };
@@ -20,9 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30D8DF0527C100BF00C6A8FD /* ioPS4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ioPS4App.swift; sourceTree = "<group>"; };
+		30D8DF0727C100E100C6A8FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		30D8DF0927C106AD00C6A8FD /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
+		30D8DF0B27C13C9500C6A8FD /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		881AE112277BE0ED007E763B /* ioPS4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ioPS4.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		881AE115277BE0ED007E763B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		881AE117277BE0ED007E763B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		881AE119277BE0ED007E763B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		881AE11C277BE0ED007E763B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		881AE11E277BE0EF007E763B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,14 +70,16 @@
 			isa = PBXGroup;
 			children = (
 				887DDF43277D523200FD4166 /* ioPS4.entitlements */,
-				881AE115277BE0ED007E763B /* AppDelegate.swift */,
-				881AE117277BE0ED007E763B /* SceneDelegate.swift */,
+				30D8DF0527C100BF00C6A8FD /* ioPS4App.swift */,
+				30D8DF0727C100E100C6A8FD /* MainView.swift */,
 				881AE119277BE0ED007E763B /* ViewController.swift */,
 				881AE11B277BE0ED007E763B /* Main.storyboard */,
 				881AE11E277BE0EF007E763B /* Assets.xcassets */,
 				881AE120277BE0EF007E763B /* LaunchScreen.storyboard */,
 				881AE123277BE0EF007E763B /* Info.plist */,
 				881AE12C277BFAAB007E763B /* ps4payload.swift */,
+				30D8DF0927C106AD00C6A8FD /* DocumentPicker.swift */,
+				30D8DF0B27C13C9500C6A8FD /* Banner.swift */,
 			);
 			path = ioPS4;
 			sourceTree = "<group>";
@@ -160,9 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				881AE12D277BFAAB007E763B /* ps4payload.swift in Sources */,
+				30D8DF0827C100E100C6A8FD /* MainView.swift in Sources */,
 				881AE11A277BE0ED007E763B /* ViewController.swift in Sources */,
-				881AE116277BE0ED007E763B /* AppDelegate.swift in Sources */,
-				881AE118277BE0ED007E763B /* SceneDelegate.swift in Sources */,
+				30D8DF0A27C106AD00C6A8FD /* DocumentPicker.swift in Sources */,
+				30D8DF0627C100BF00C6A8FD /* ioPS4App.swift in Sources */,
+				30D8DF0C27C13C9500C6A8FD /* Banner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,23 +320,22 @@
 				CODE_SIGN_ENTITLEMENTS = ioPS4/ioPS4.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GR3NL679U6;
+				DEVELOPMENT_TEAM = 9859KQSN8L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iops4/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ioPS4;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.brandonplank.iops4;
+				PRODUCT_BUNDLE_IDENTIFIER = org.brandonplank.iops4.e;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -346,23 +353,22 @@
 				CODE_SIGN_ENTITLEMENTS = ioPS4/ioPS4.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GR3NL679U6;
+				DEVELOPMENT_TEAM = 9859KQSN8L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iops4/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ioPS4;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.brandonplank.iops4;
+				PRODUCT_BUNDLE_IDENTIFIER = org.brandonplank.iops4.e;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
